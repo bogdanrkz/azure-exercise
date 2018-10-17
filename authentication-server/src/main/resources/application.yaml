@@ -4,8 +4,8 @@ spring:
           client:
               registration:
                   azure:
-                      client-id: 5b72ceea-5819-417b-bb29-c9061815df26
-                      client-secret: tOIo+zbXjISYRXkHZ+FYEWvabEE09c4q2FFx63UCyD4=
+                      client-id: ea431e05-7196-42c8-b6cd-4b0af33191cc
+                      client-secret: o7r9+Tk3+gi/GzNFOKWMTNHZhpdF/bY1O6WK+1kJFG8=
     datasource:
       url: jdbc:mysql://localhost:3306/authuser?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8
       username: root
@@ -15,11 +15,11 @@ hibernate:
   dialect: org.hibernate.dialect.MySQL5InnoDBDialect
 
 server:
-  port: 8092
+  port: 8080
 
 azure:
     activedirectory:
-        tenant-id:  7409b30d-303c-417d-b050-69d3f573cbf0
+        tenant-id: 94058894-8314-415d-9482-8d3b9eea4888
         active-directory-groups: users,admins
 
 rest:

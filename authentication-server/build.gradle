@@ -38,6 +38,7 @@ dependencies {
 	implementation('org.springframework.security:spring-security-oauth2-jose')
 	implementation('com.microsoft.azure:azure-active-directory-spring-boot-starter')
 	implementation('org.flywaydb:flyway-core')
+	implementation('org.thymeleaf.extras:thymeleaf-extras-springsecurity4')
 	implementation('org.springframework.cloud:spring-cloud-starter-oauth2')
 	implementation('org.springframework.cloud:spring-cloud-starter-openfeign')
 	runtimeOnly('mysql:mysql-connector-java')

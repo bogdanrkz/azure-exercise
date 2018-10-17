@@ -9,5 +9,5 @@ CREATE TABLE person (
   ENGINE = InnoDB;
 
 
-INSERT INTO person VALUES (1, "jheining@bogdandomain.onmicrosoft.com", "Jan", "Heining");
-INSERT INTO person VALUES (2, "jlennon@bogdandomain.onmicrosoft.com", "John", "Lennon");
+INSERT INTO person VALUES (1, "j.heining@azureexercise.onmicrosoft.com", "Jan", "Heining");
+INSERT INTO person VALUES (2, "j.lennon@azureexercise.onmicrosoft.com", "John", "Lennon");
