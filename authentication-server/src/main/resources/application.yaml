@@ -7,7 +7,7 @@ spring:
                       client-id: 5b72ceea-5819-417b-bb29-c9061815df26
                       client-secret: tOIo+zbXjISYRXkHZ+FYEWvabEE09c4q2FFx63UCyD4=
     datasource:
-      url: jdbc:mysql://localvm:3306/authuser?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8
+      url: jdbc:mysql://localhost:3306/authuser?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8
       username: root
       password: Start123
 

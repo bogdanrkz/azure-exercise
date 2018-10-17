@@ -2,7 +2,7 @@ spring:
   application:
     name: user-storage
   datasource:
-    url: jdbc:mysql://localvm:3306/person?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://localhost:3306/person?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8
     username: root
     password: Start123
 
