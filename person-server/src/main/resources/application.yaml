@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: user-storage
+  datasource:
+    url: jdbc:mysql://localvm:3306/person?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: Start123
+
+hibernate:
+  dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+server:
+  port: 8081

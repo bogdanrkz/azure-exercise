@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <title>Exercise Index Page</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
+</head>
+<body>
+<div style="float: right" th:fragment="logout" sec:authorize="isAuthenticated()">
+
+    <div class="label label-info">
+        <span >User: </span><span sec:authentication="name"></span>
+    </div>
+    <div>
+        <span class="label label-info">Authorities: </span><span sec:authentication="authorities"></span>
+    </div>
+    <div>&nbsp;</div>
+    <div style="float:right">
+        <form action="#" th:action="@{/logout}" method="post">
+            <input type="submit" value="Logout"/>
+        </form>
+    </div>
+</div>
+<h1>Welcome to Application</h1>
+
+<div>
+    You are successfully logged in <span style="font-weight:bold" th:text="${userName}"></span>
+</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>
+    <a href="/user">User Page</a> |
+    <a href="/admin">Admin Page</a>
+</div>
+</body>
+</html>

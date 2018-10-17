@@ -1,0 +1,27 @@
+spring:
+    security:
+       oauth2:
+          client:
+              registration:
+                  azure:
+                      client-id: 5b72ceea-5819-417b-bb29-c9061815df26
+                      client-secret: tOIo+zbXjISYRXkHZ+FYEWvabEE09c4q2FFx63UCyD4=
+    datasource:
+      url: jdbc:mysql://localvm:3306/authuser?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8
+      username: root
+      password: Start123
+
+hibernate:
+  dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+server:
+  port: 8092
+
+azure:
+    activedirectory:
+        tenant-id:  7409b30d-303c-417d-b050-69d3f573cbf0
+        active-directory-groups: users,admins
+
+rest:
+  endpoint:
+    person: localhost:8081/person
