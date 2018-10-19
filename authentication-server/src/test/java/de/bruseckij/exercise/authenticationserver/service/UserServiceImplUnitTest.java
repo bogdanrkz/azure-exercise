@@ -17,6 +17,8 @@ import java.util.Optional;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.nullValue;
+import static org.mockito.ArgumentMatchers.isNull;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyZeroInteractions;
 import static org.mockito.Mockito.when;
@@ -62,6 +64,7 @@ public class UserServiceImplUnitTest {
 		assertThat(capturedUser.getFirstName(), is(person.getFirstName()));
 		assertThat(capturedUser.getLastName(), is(person.getLastName()));
 		assertThat(capturedUser.getUserName(), is(person.getUserName()));
+		assertThat(capturedUser.getId(), is(nullValue()));
 	}
 
 	@Test
@@ -71,6 +74,7 @@ public class UserServiceImplUnitTest {
 		when(personRegistryClient.findByUserName(TEST_USER_NAME)).thenReturn(person);
 
 		User user = new User(TEST_USER_NAME, "xxx", "yyy");
+		user.setId(22l);
 
 		when(userRepository.findByUserName(TEST_USER_NAME)).thenReturn(Optional.of(user));
 
@@ -82,8 +86,9 @@ public class UserServiceImplUnitTest {
 		User capturedUser = userArgumentCaptor.getValue();
 
 		assertThat(capturedUser.getFirstName(), is(person.getFirstName()));
+		assertThat(capturedUser.getFirstName(), is(person.getFirstName()));
 		assertThat(capturedUser.getLastName(), is(person.getLastName()));
-		assertThat(capturedUser.getUserName(), is(person.getUserName()));
+		assertThat(capturedUser.getId(), is(22l));
 	}
 
 }
